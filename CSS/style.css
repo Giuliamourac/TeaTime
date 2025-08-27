@@ -1,0 +1,46 @@
+body
+{
+    background-color: #EDEAE5;
+    margin: 0px;
+    padding: 0px;
+}
+
+section
+{
+    justify-items: center;
+}
+
+div
+{
+    display: flex;
+    flex-direction: row;
+}
+
+article
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDA1A1;
+    width: 260px;
+    height: 260px;
+    margin: 20px;
+}
+
+article:hover
+{
+    transition: 0.9s;
+    scale: 105%;
+}
+
+img
+{
+    width: 200px;
+    height: 200px;
+}
+
+a
+{
+    color: #5C4438;
+    text-decoration: none;
+}
