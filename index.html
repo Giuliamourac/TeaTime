@@ -4,55 +4,62 @@
     <meta charset="UTF-8">
     <title>Tea Time</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/popup.css">
 </head>
 <body>
+
+    <section class="popup" style="display: none;">
+        <button id="popupFechar">X</button>
+        <h2 class="tituloPopup">Chá Teste</h2>
+
+        <img src="Imagens/chá de camomila.png" alt="Desenho de uma caneca de chá de camomila" class="fotoPopup">
+
+        <p id="timer">minutos</p>
+
+        <div id="botoes">
+            <button id="start">comecar</button> 
+            <button id="stop">parar</button>
+        </div>
+    </section>
+
+    <div class="overlay"></div>
+
     <section>
         <h1>Tea Time</h1>
         <div>
-            <a href="">
-                <article>
-                    <img src="Imagens/chá preto.png" alt="Desenho de uma caneca de chá preto">
-                    <h2>Cha preto</h2>
-                </article>
-            </a>
+            <article id="chaPreto" class="cha" data-titulo="Chá Preto ☕" data-tempo="180" data-foto="Imagens/chá preto.png">
+                <img src="Imagens/chá preto.png" alt="Desenho de uma caneca de chá preto">
+                <h2>Cha preto</h2>
+            </article>
 
-            <a href="">
-                <article>
-                    <img src="Imagens/chá verde.png" alt="Desenho de uma caneca de chá verde">
-                    <h2>Cha verde</h2>
-                </article>
-            </a>
-
-            <a href="">
-                <article>
-                    <img src="Imagens/chá mate.png" alt="">
-                    <h2>Cha mate</h2>
-                </article>
-            </a>
+            <article id="chaVerde" class="cha" data-titulo="Chá verde ☕" data-tempo="180" data-foto="Imagens/chá verde.png">
+                <img src="Imagens/chá verde.png" alt="Desenho de uma caneca de chá verde">
+                <h2>Cha verde</h2>
+            </article>
+            
+            <article id="chaMate" class="cha" data-titulo="Chá Mate ☕" data-tempo="240" data-foto="Imagens/chá mate.png">
+                <img src="Imagens/chá mate.png" alt="Desenho de um copo de chá mate">
+                <h2>Cha mate</h2>
+            </article>
         </div>
 
         <div>
-            <a href="">
-                <article>
-                    <img src="" alt="">
-                    <h2>Hibisco</h2>
-                </article>
-            </a>
+            <article id="chaHibisco" class="cha" data-titulo="Chá de hibisco ☕" data-tempo="360" data-foto="Imagens/chá de hibisco.png">
+                <img src="Imagens/chá de hibisco.png" alt="xícara de chá de hibisco">
+                <h2>Hibisco</h2>
+            </article>
 
-            <a href="">
-                <article>
-                    <img src="" alt="">
-                    <h2>Cha de camomila</h2>
-                </article>
-            </a>
+            <article id="chaCamomila" class="cha" data-titulo="Chá de camomila ☕" data-tempo="240" data-foto="Imagens/chá de camomila.png">
+                <img src="Imagens/chá de camomila.png" alt="Desenho de uma xícara de chá de camomila">
+                <h2>Cha de camomila</h2>
+            </article>
 
-            <a href="">
-                <article>
-                <img src="" alt="">
+            <article id="chaOolong" class="cha" data-titulo="Chá oolong ☕" data-tempo="240" data-foto="Imagens/oolong.png">
+                <img src="Imagens/oolong.png" alt="xícara de chá Oolong">
                 <h2>Oolong</h2>
-                </article>
-            </a>
+            </article>
         </div>
     </section>
 </body>
+<script src="Js/script.js"></script>
 </html>

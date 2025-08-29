@@ -2,6 +2,7 @@
 
 body
 {
+    color: #443229;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -31,7 +32,7 @@ article
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #DDA1A1;
+    background-color: #ebaaaa;
     border-radius: 2%;
     width: 260px;
     height: 260px;
@@ -48,10 +49,4 @@ img
 {
     width: 200px;
     height: 200px;
-}
-
-a
-{
-    color: #443229;
-    text-decoration: none;
 }
