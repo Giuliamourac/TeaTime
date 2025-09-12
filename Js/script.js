@@ -1,51 +1,48 @@
-var modal = document.querySelector(".popup");
-var overlay = document.querySelector(".overlay");
+var modal = document.querySelector("#popup");
+var titulo = document.querySelector("#tituloPopup");
+var foto = document.querySelector("#fotoPopup");
 var fechar = document.querySelector("#popupFechar");
-var titulo = document.querySelector(".tituloPopup");
-var timer = document.querySelector("#timer");
-var cha = document.querySelectorAll(".cha");
 var start = document.querySelector("#start");
-var foto = document.querySelector(".fotoPopup");
+var stopT = document.querySelector("#stop");
+var timer = document.querySelector("#timer");
+var cha = document.querySelectorAll("article");
+var overlay = document.querySelector("#overlay");
+var reset = document.querySelector("#reset")
 
-let tempo = 0;
+let minutos = 0;
+let minutosIniciais = 0;
+let segundos = 0;
+let segundosIniciais = 0;
 let intervalo = null;
 
 fechar.addEventListener("click", fecharModal);
 overlay.addEventListener("click", fecharModal);
 start.addEventListener("click", startTimer);
-
+reset.addEventListener("click", resetTimer);
+stopT.addEventListener("click", stopTimer);
 cha.forEach(item => 
 {
   item.addEventListener("click", () => abrirModal(item));
 });
+
+function atualizarDisplay() {
+  timer.textContent = `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+}
+
 
 function abrirModal(item) {
   modal.style.display = "block";
   overlay.style.display = "block";
 
   titulo.textContent = item.dataset.titulo;
-  tempo = parseInt(item.dataset.tempo);
+  minutosIniciais = parseInt(item.dataset.tempo);
+  segundosIniciais = 0;
+
+  minutos = minutosIniciais;
+  segundos = segundosIniciais;
 
   foto.src = item.dataset.foto;
-
-  timer.textContent = tempo;
-}
-
-function startTimer() 
-{
-  clearInterval(intervalo);
-
-  for (let i = tempo; i >= 0; i--) 
-    {
-      setTimeout(() => 
-        {
-          timer.textContent = i;
-          if (i == 0)
-          {
-            alert("cabo"); 
-          }
-      }, (tempo - i) * 1000); 
-  }
+  atualizarDisplay();
 }
 
 function fecharModal() 
@@ -53,4 +50,51 @@ function fecharModal()
   modal.style.display = "none";
   overlay.style.display = "none";
   clearInterval(intervalo);
+  intervalo = null;
+}
+
+function startTimer() 
+{
+  if(intervalo !== null)
+  {
+    return;
+  }
+
+  intervalo = setInterval(() =>
+  {
+    if (minutos === 0 && segundos === 0) 
+    {
+      clearInterval(intervalo);
+      intervalo = null;
+      atualizarDisplay();
+      alert("cabou");
+      return;
+    }
+    else if(segundos === 0)
+    {
+        minutos--;
+        segundos = 59;
+    }
+    else
+    {
+      segundos--;
+    }
+
+    atualizarDisplay();
+  }, 1000);
+}
+
+function resetTimer()
+{
+  clearInterval(intervalo);
+  intervalo = null;
+  minutos = minutosIniciais;
+  segundos = segundosIniciais;
+  atualizarDisplay();
+}
+
+function stopTimer()
+{
+  clearInterval(intervalo);
+  intervalo = null;
 }

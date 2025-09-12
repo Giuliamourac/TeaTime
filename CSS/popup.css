@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.popup
+section:first-child
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: fixed;
     top: 10vw;
     left: 35vw;
@@ -16,16 +12,17 @@
     z-index: 1000;
 }
 
-.tituloPopup
+#tituloPopup
 {
-    margin: 0px;
+    margin: 0;
+    font-size: 1.7vw;
 }
 
 button
 {
     border: 0;
-    background-color: #EDEAE5;
     color: #443229;
+    background-color: #EDEAE5;
     font-weight: 900;
 }
 
@@ -37,43 +34,54 @@ button:hover
 
 #popupFechar
 {
-    font-size: 15px;
+    font-size: 0.8vw;
     display: inline;
-    margin: 15px;
+    margin: 1vw;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 1.5vw;
+    height: 1.5vw;
 }
 
 #start, #stop
 {
+    font-size: 0.8vw;
     justify-content: center;
     border-radius: 5px;
-    width: 100px;
-    height: 30px;
-    margin: 5px;
+    width: 5vw;
+    height: 1.7vw;
+    margin: 0.3vw;
 }
 
-.popup img
+#popup img
 {
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 15.5vw;
+    height: 15.5vw;
 }
 
-.overlay 
+#popup button img, #popup button:nth-child(2)
 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.267);
-  display: none;
+    justify-self: center;
+    align-self: center;
+    background-color:rgba(255, 255, 255, 0);
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+#timer
+{
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+#overlay 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    display: none;
     z-index: 999; 
-}
-
-.popup h2
-{
-    font-size: 40px;
 }

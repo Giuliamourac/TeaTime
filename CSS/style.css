@@ -2,6 +2,7 @@
 
 body
 {
+    user-select: none;
     color: #443229;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
@@ -13,7 +14,11 @@ body
 
 section
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     justify-items: center;
+    align-items: center;
 }
 
 h1
@@ -25,6 +30,12 @@ div
 {
     display: flex;
     flex-direction: row;
+}
+
+img
+{
+    width: 200px;
+    height: 200px;
 }
 
 article
@@ -43,10 +54,4 @@ article:hover
 {
     transition: 0.5s;
     scale: 105%;
-}
-
-img
-{
-    width: 200px;
-    height: 200px;
 }
