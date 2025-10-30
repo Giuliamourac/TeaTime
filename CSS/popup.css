@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-section:first-child
+#popup
 {
     position: fixed;
+    justify-items: center;
     top: 10vw;
     left: 35vw;
     right: 35vw;
@@ -12,17 +13,23 @@ section:first-child
     z-index: 1000;
 }
 
-#tituloPopup
+#popupFechar
 {
-    margin: 0;
-    font-size: 1.7vw;
+    font-size: 0.8vw;
+    display: inline;
+    margin: 1vw;
+    border-radius: 50%;
+    width: 1.5vw;
+    max-width: 5rem;
+    height: 1.5vw;
+    max-height: 5rem;
 }
 
 button
 {
     border: 0;
-    color: #443229;
-    background-color: #EDEAE5;
+    color: #7A5C58;
+    background-color: #fde7b6;
     font-weight: 900;
 }
 
@@ -32,14 +39,23 @@ button:hover
     transition: 0.3s;
 }
 
-#popupFechar
+#tituloPopup
 {
-    font-size: 0.8vw;
-    display: inline;
-    margin: 1vw;
-    border-radius: 50%;
-    width: 1.5vw;
-    height: 1.5vw;
+    font-size: 1.7vw;
+    margin: 0;
+}
+
+#popup img
+{
+    display: block;
+    width: 15.5vw;
+    height: 15.5vw;
+}
+
+#timer
+{
+    font-size: 1.3vw;
+    font-weight: bold;
 }
 
 #start, #stop
@@ -52,13 +68,6 @@ button:hover
     margin: 0.3vw;
 }
 
-#popup img
-{
-    display: block;
-    width: 15.5vw;
-    height: 15.5vw;
-}
-
 #popup button img, #popup button:nth-child(2)
 {
     justify-self: center;
@@ -66,12 +75,6 @@ button:hover
     background-color:rgba(255, 255, 255, 0);
     width: 1.3vw;
     height: 1.3vw;
-}
-
-#timer
-{
-    font-size: 1.3vw;
-    font-weight: bold;
 }
 
 #overlay 

@@ -5,7 +5,7 @@ var fechar = document.querySelector("#popupFechar");
 var start = document.querySelector("#start");
 var stopT = document.querySelector("#stop");
 var timer = document.querySelector("#timer");
-var cha = document.querySelectorAll("article");
+var cha = document.querySelectorAll("figure");
 var overlay = document.querySelector("#overlay");
 var reset = document.querySelector("#reset")
 

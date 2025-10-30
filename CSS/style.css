@@ -2,55 +2,78 @@
 
 body
 {
-    user-select: none;
+    background-color: #F8F3F1;
     color: #443229;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
-    background-color: #EDEAE5;
     margin: 0px;
     padding: 0px;
+    user-select: none;
 }
 
-section
+main
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    justify-items: center;
     align-items: center;
+    justify-content: center;
+}
+
+
+main > section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 h1
 {
-    font-size: 35px;
-}
-
-div
-{
-    display: flex;
-    flex-direction: row;
+    font-size: 2.5vw;
+    align-self: center;
 }
 
 img
 {
-    width: 200px;
     height: 200px;
+    width: 200px;
 }
 
-article
+figure
 {
     display: flex;
-    flex-direction: column;
     align-items: center;
     background-color: #ebaaaa;
-    border-radius: 2%;
-    width: 260px;
+    border-radius: 5%;
+    box-shadow: 0 4px 12px #D6C7CE;
+    flex-direction: column;
     height: 260px;
-    margin: 20px;
+    margin: 0.7vw;
+    width: 250px;
 }
 
-article:hover
+figure img
+{
+    height: 70%;
+    width: 70%;
+}
+
+figcaption
+{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+figure:hover
 {
     transition: 0.5s;
     scale: 105%;
