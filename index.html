@@ -2,25 +2,26 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tea Time</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/popup.css">
 </head>
 <body>
     <section id="popup" style="display: none;" role="dialog">
-        <button id="popupFechar" aria-label="Fechar popup">X</button>
+        <button id="popupFechar">X</button>
         <h2 id="tituloPopup">Chá Teste</h2>
 
         <img src="Imagens/chá de camomila.png" alt="Desenho de uma caneca de chá de camomila" id="fotoPopup">
 
-        <p id="timer" aria-label="Timer"></p>
+        <p id="timer"></p>
 
         <div>
-            <button id="start" aria-label="Comecar timer">comecar</button> 
-            <button id="reset" aria-label="Resetar timer">
+            <button id="start">comecar</button> 
+            <button id="reset">
                 <img src="Imagens/reset.png" alt="botão para resetar">
             </button>
-            <button id="stop" aria-label="Parar timer">parar</button>
+            <button id="stop">parar</button>
         </div>
     </section>
 
@@ -28,8 +29,6 @@
 
     <header>
         <h1 tabindex="0">Tea Time</h1>
-            
-        <img src="Imagens/TESTE2.png" alt="teste">
     </header>
 
     <main>
@@ -67,7 +66,17 @@
                 <figcaption>Chá oolong</figcaption>
             </figure>
         </section>
+
+        <div id="particles-js"></div>
     </main>
+
+    <script src="Js/particles.min.js"></script> 
+    
+    <script>
+        particlesJS.load('particles-js', 'js/particles.json', function() {
+            console.log('Particles.js carregado com sucesso!');
+        });
+    </script>
 
 <script src="Js/script.js"></script>
 </body>
