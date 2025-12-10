@@ -11,11 +11,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    justify-items: center;
-    padding: 7rem 2rem 1.5rem 2rem;
     height: 27rem;
     width: 30rem;
     max-width: 90%;
+    padding: 7rem 2rem 1.5rem 2rem;
     background-color: #ebaaaa;
     border-radius: 5%;
     box-shadow: 0 0 20px rgba(0,0,0,0.25);
@@ -72,6 +71,8 @@
 #popup img 
 {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 17rem;
     width: 17rem;
     object-fit: contain;
@@ -79,6 +80,7 @@
 
 #timer
 {
+    text-align: center;
     font-size: 1.75rem;
     font-weight: bold;
 }
@@ -89,8 +91,8 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
-    max-width: 30rem;
-    min-width: 30rem;
+    max-width: 100%;
+    min-width: auto;
 }
 
 #start, #stop
