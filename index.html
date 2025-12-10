@@ -9,10 +9,10 @@
 </head>
 <body>
     <section id="popup" style="display: none;" role="dialog">
-        <button id="popupFechar">X</button>
+        <button id="popupFechar" tabindex="-1">X</button>
         <h2 id="tituloPopup">Chá Teste</h2>
 
-        <img src="Imagens/chá de camomila.png" alt="Desenho de uma caneca de chá de camomila" id="fotoPopup">
+        <img src="Imagens/chaCamomila.png" alt="Desenho de uma caneca de chá de camomila" id="fotoPopup">
 
         <p id="timer"></p>
 
@@ -28,44 +28,114 @@
     <div id="overlay"></div>
 
     <header>
-        <h1 tabindex="0">Tea Time</h1>
+        <h1>Tea Time</h1>
     </header>
 
     <main>
+
+        <div>
+            <button class="cha"
+                    data-titulo="Chá Preto ☕" 
+                    data-tempo="3" 
+                    data-foto="Imagens/chaPreto.png" 
+                    tabindex="1">
+
+                <img src="Imagens/chaPreto.png" alt="Desenho de uma caneca de chá preto">
+
+                <span>Chá preto</span>
+            </button>
         
-        <section>
-            <figure data-titulo="Chá Preto ☕" data-tempo="3" data-foto="Imagens/chaPreto.png" role="button" aria-controls="popup" tabindex="1">
+            <button class="cha"
+                    data-titulo="Chá verde ☕" 
+                    data-tempo="3" 
+                    data-foto="Imagens/chaVerde.png" 
+                    tabindex="2">
+
+                <img src="Imagens/chaVerde.png" alt="Desenho de uma caneca de chá verde">
+
+                <span>Chá verde</span>
+            </button>
+        
+            <button class="cha"
+                    data-titulo="Chá Mate ☕" 
+                    data-tempo="4" 
+                    data-foto="Imagens/chaMate.png" 
+                    tabindex="3">
+
+                <img src="Imagens/chaMate.png" alt="Desenho de um copo de chá mate">
+
+                <span>Chá mate</span>
+            </button>
+        </div>
+
+        <div>
+            <button class="cha"
+                    data-titulo="Chá de hibisco ☕" 
+                    data-tempo="6" 
+                    data-foto="Imagens/chaHibisco.png" 
+                    tabindex="4">
+
+                <img src="Imagens/chaHibisco.png" alt="xícara de chá de hibisco">
+
+                <span>Chá de hibisco</span>
+            </button>
+        
+            <button class="cha"
+                    data-titulo="Chá de camomila ☕" 
+                    data-tempo="4" 
+                    data-foto="Imagens/chaCamomila.png" 
+                    tabindex="5">
+
+                <img src="Imagens/chaCamomila.png" alt="Desenho de uma xícara de chá de camomila">
+
+                <span>Chá de camomila</span>
+            </button>
+        
+            <button class="cha"
+                    data-titulo="Chá oolong ☕" 
+                    data-tempo="4" 
+                    data-foto="Imagens/oolong.png" 
+                    tabindex="6">
+
+                <img src="Imagens/oolong.png" alt="xícara de chá Oolong">
+
+                <span>Chá oolong</span>
+            </button>
+        </div>
+        
+        <!-- <div>
+            <figure data-titulo="Chá Preto ☕" data-tempo="3" data-foto="Imagens/chaPreto.png" tabindex="1">
                 <img src="Imagens/chaPreto.png" alt="Desenho de uma caneca de chá preto">
                 <figcaption>Chá preto</figcaption>
             </figure>
 
-            <figure data-titulo="Chá verde ☕" data-tempo="3" data-foto="Imagens/chaVerde.png" role="button" aria-controls="popup" tabindex="2">
+            <figure data-titulo="Chá verde ☕" data-tempo="3" data-foto="Imagens/chaVerde.png" tabindex="2">
                 <img src="Imagens/chaVerde.png" alt="Desenho de uma caneca de chá verde">
                 <figcaption>Chá verde</figcaption>
             </figure>
             
-            <figure data-titulo="Chá Mate ☕" data-tempo="4" data-foto="Imagens/chaMate.png" role="button" aria-controls="popup" tabindex="3">
+            <figure data-titulo="Chá Mate ☕" data-tempo="4" data-foto="Imagens/chaMate.png" tabindex="3">
                 <img src="Imagens/chaMate.png" alt="Desenho de um copo de chá mate">
                 <figcaption>Chá mate</figcaption>
             </figure>
-        </section>
+        </div>
 
-        <section>
-            <figure data-titulo="Chá de hibisco ☕" data-tempo="6" data-foto="Imagens/chaHibisco.png" role="button" aria-controls="popup" tabindex="4">
+        <div>
+            <figure data-titulo="Chá de hibisco ☕" data-tempo="6" data-foto="Imagens/chaHibisco.png" tabindex="4">
                 <img src="Imagens/chaHibisco.png" alt="xícara de chá de hibisco">
                 <figcaption>Chá de hibisco</figcaption>
             </figure>
 
-            <figure data-titulo="Chá de camomila ☕" data-tempo="4" data-foto="Imagens/chaCamomila.png" role="button" aria-controls="popup" tabindex="5">
+            <figure data-titulo="Chá de camomila ☕" data-tempo="4" data-foto="Imagens/chaCamomila.png" tabindex="5">
                 <img src="Imagens/chaCamomila.png" alt="Desenho de uma xícara de chá de camomila">
                 <figcaption>Chá de camomila</figcaption>
             </figure>
 
-            <figure data-titulo="Chá oolong ☕" data-tempo="4" data-foto="Imagens/oolong.png" role="button" aria-controls="popup" tabindex="6">
+            <figure data-titulo="Chá oolong ☕" data-tempo="4" data-foto="Imagens/oolong.png" tabindex="6">
                 <img src="Imagens/oolong.png" alt="xícara de chá Oolong">
                 <figcaption>Chá oolong</figcaption>
             </figure>
-        </section>
+        </div> -->
 
         <div id="particles-js"></div>
     </main>

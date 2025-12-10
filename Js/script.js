@@ -5,7 +5,7 @@ var fechar = document.querySelector("#popupFechar");
 var start = document.querySelector("#start");
 var stopT = document.querySelector("#stop");
 var timer = document.querySelector("#timer");
-var cha = document.querySelectorAll("figure");
+var cha = document.querySelectorAll(".cha");
 var overlay = document.querySelector("#overlay");
 var reset = document.querySelector("#reset")
 
@@ -43,6 +43,7 @@ function abrirModal(item) {
 
   foto.src = item.dataset.foto;
   atualizarDisplay();
+  fechar.focus();
 }
 
 function fecharModal() 
